@@ -12,6 +12,7 @@
 		D26F3CB9236B918500DA73D2 /* HeroesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F3CB8236B918500DA73D2 /* HeroesTVC.swift */; };
 		D26F3CBB236B920600DA73D2 /* HeroTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F3CBA236B920600DA73D2 /* HeroTVCell.swift */; };
 		D26F3CBD236B958A00DA73D2 /* AddHeroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F3CBC236B958A00DA73D2 /* AddHeroVC.swift */; };
+		D26F3CBF236BA16E00DA73D2 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F3CBE236BA16E00DA73D2 /* DetailVC.swift */; };
 		D2DD2FF7236B5930000C2941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD2FF6236B5930000C2941 /* AppDelegate.swift */; };
 		D2DD2FFC236B5930000C2941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DD2FFA236B5930000C2941 /* Main.storyboard */; };
 		D2DD3001236B5934000C2941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2DD3000236B5934000C2941 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		D26F3CB8236B918500DA73D2 /* HeroesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTVC.swift; sourceTree = "<group>"; };
 		D26F3CBA236B920600DA73D2 /* HeroTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTVCell.swift; sourceTree = "<group>"; };
 		D26F3CBC236B958A00DA73D2 /* AddHeroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHeroVC.swift; sourceTree = "<group>"; };
+		D26F3CBE236BA16E00DA73D2 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		D2DD2FF3236B5930000C2941 /* Me See Hero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Me See Hero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DD2FF6236B5930000C2941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2DD2FFB236B5930000C2941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				D26F3CB8236B918500DA73D2 /* HeroesTVC.swift */,
 				D26F3CBA236B920600DA73D2 /* HeroTVCell.swift */,
 				D26F3CBC236B958A00DA73D2 /* AddHeroVC.swift */,
+				D26F3CBE236BA16E00DA73D2 /* DetailVC.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				D2DD2FF7236B5930000C2941 /* AppDelegate.swift in Sources */,
 				D26F3CBD236B958A00DA73D2 /* AddHeroVC.swift in Sources */,
 				D23E0291236B8FE1003E6D71 /* CoreDataStack.swift in Sources */,
+				D26F3CBF236BA16E00DA73D2 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

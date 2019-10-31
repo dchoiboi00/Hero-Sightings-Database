@@ -19,13 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LVk-4v-VQq" customClass="HeroTVCell" customModule="Me_See_Hero" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HeroTVCell" id="LVk-4v-VQq" customClass="HeroTVCell" customModule="Me_See_Hero" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LVk-4v-VQq" id="a01-HP-HZA">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="730" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BfT-zt-UtC" kind="show" id="khH-a7-lg9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -36,7 +39,7 @@
                     <navigationItem key="navigationItem" id="z8T-dX-5PL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FiU-4Y-B6t">
                             <connections>
-                                <segue destination="1Bp-qO-3VB" kind="show" id="O8B-mz-hLr"/>
+                                <segue destination="1Bp-qO-3VB" kind="presentation" id="O8B-mz-hLr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -45,16 +48,32 @@
             </objects>
             <point key="canvasLocation" x="257.03125" y="-43.359375"/>
         </scene>
+        <!--DetailVC-->
+        <scene sceneID="1QR-W4-obb">
+            <objects>
+                <viewController id="BfT-zt-UtC" customClass="DetailVC" customModule="Me_See_Hero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qag-bg-QvL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JsU-uB-8Pw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edZ-Pu-3hZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="646"/>
+        </scene>
         <!--Add HeroVC-->
         <scene sceneID="9f4-gO-0S5">
             <objects>
-                <viewController id="1Bp-qO-3VB" customClass="AddHeroVC" customModule="Me_See_Hero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="1Bp-qO-3VB" customClass="AddHeroVC" customModule="Me_See_Hero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sbh-tz-3sP">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ONm-aI-wav"/>
                     </view>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyU-6W-gVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
