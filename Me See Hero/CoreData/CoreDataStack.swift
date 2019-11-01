@@ -43,7 +43,7 @@ final class CoreDataStack: NSObject {
         }
     }
     
-    func saveHero(name: String, image: NSData, zodiac: String, residence: String, location: String, snapshot: NSData) {
+    func saveHero(name: String, image: Int16, zodiac: String, residence: String, location: String, snapshot: NSData) {
         
         if let entity = NSEntityDescription.entity(forEntityName: "Hero", in: context) {
             let hero = NSManagedObject(entity: entity, insertInto: context)

@@ -20,6 +20,7 @@
 		D2E9A7C7236BD30A005001B7 /* Me_See_Hero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A7C5236BD30A005001B7 /* Me_See_Hero.xcdatamodeld */; };
 		D2E9A7CE236BD7AF005001B7 /* Hero+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A7CC236BD7AF005001B7 /* Hero+CoreDataClass.swift */; };
 		D2E9A7CF236BD7AF005001B7 /* Hero+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A7CD236BD7AF005001B7 /* Hero+CoreDataProperties.swift */; };
+		D2E9A7D1236BDF4C005001B7 /* HeroType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A7D0236BDF4C005001B7 /* HeroType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		D2E9A7C6236BD30A005001B7 /* Me_See_Hero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Me_See_Hero.xcdatamodel; sourceTree = "<group>"; };
 		D2E9A7CC236BD7AF005001B7 /* Hero+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hero+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D2E9A7CD236BD7AF005001B7 /* Hero+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hero+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D2E9A7D0236BDF4C005001B7 /* HeroType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				D26F3CBA236B920600DA73D2 /* HeroTVCell.swift */,
 				D26F3CBC236B958A00DA73D2 /* AddHeroVC.swift */,
 				D26F3CBE236BA16E00DA73D2 /* DetailVC.swift */,
+				D2E9A7D0236BDF4C005001B7 /* HeroType.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				D2E9A7CE236BD7AF005001B7 /* Hero+CoreDataClass.swift in Sources */,
 				D26F3CBF236BA16E00DA73D2 /* DetailVC.swift in Sources */,
 				D2E9A7C7236BD30A005001B7 /* Me_See_Hero.xcdatamodeld in Sources */,
+				D2E9A7D1236BDF4C005001B7 /* HeroType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

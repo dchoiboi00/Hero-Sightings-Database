@@ -17,7 +17,7 @@ extension Hero {
         return NSFetchRequest<Hero>(entityName: "Hero")
     }
 
-    @NSManaged public var image: NSData?
+    @NSManaged public var image: Int16
     @NSManaged public var location: String?
     @NSManaged public var name: String?
     @NSManaged public var residence: String?
