@@ -152,11 +152,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="48"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="onCancel:" destination="1Bp-qO-3VB" eventType="touchUpInside" id="lYf-4j-YtO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2b-EV-8Yf">
                                         <rect key="frame" x="264" y="0.0" width="252" height="48"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="onAdd:" destination="1Bp-qO-3VB" eventType="touchUpInside" id="lpv-m3-bTM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -186,7 +192,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuz-Ow-fau">
+                                    <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuz-Ow-fau">
                                         <rect key="frame" x="226" y="0.0" width="214" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="iSY-DL-O05"/>
@@ -208,6 +214,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onResidenceChange:" destination="1Bp-qO-3VB" eventType="editingChanged" id="EoZ-sL-bpc"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -225,6 +234,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onLocationChange:" destination="1Bp-qO-3VB" eventType="editingChanged" id="iS9-nC-4Zn"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -273,6 +285,10 @@
                         <viewLayoutGuide key="safeArea" id="ONm-aI-wav"/>
                     </view>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="heroPicker" destination="ETc-Vp-hcZ" id="Qab-j5-8OF"/>
+                        <outlet property="zodiacPicker" destination="xuz-Ow-fau" id="FWo-7a-OXT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyU-6W-gVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

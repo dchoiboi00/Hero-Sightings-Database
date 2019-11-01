@@ -8,23 +8,40 @@
 
 import UIKit
 
+protocol AddHeroDelegate: class {
+    func addedHero()
+}
+
 class AddHeroVC: UIViewController {
 
+    @IBOutlet weak var heroPicker: UIPickerView!
+    @IBOutlet weak var zodiacPicker: UIPickerView!
+    
+    var inputResidence: String?
+    var inputLocation: String?
+    
+    weak var delegate: AddHeroDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Actions
+    @IBAction func onResidenceChange(_ sender: UITextField) {
+        
     }
-    */
-
+    
+    @IBAction func onLocationChange(_ sender: UITextField) {
+        
+    }
+    
+    @IBAction func onCancel(_ sender: UIButton) {
+        presentingViewController?.dismiss(animated: true)
+    }
+    
+    @IBAction func onAdd(_ sender: UIButton) {
+        
+    }
+    
 }
