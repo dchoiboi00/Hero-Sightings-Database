@@ -16,6 +16,7 @@ class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
 
     @IBOutlet weak var heroPicker: UIPickerView!
     @IBOutlet weak var zodiacPicker: UIPickerView!
+    @IBOutlet weak var imageSelected: UIImageView!
     
     var inputResidence: String?
     var inputLocation: String?
@@ -25,7 +26,7 @@ class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        imageSelected.image = UIImage(named: "redNo")
     }
     
     // MARK: - Actions
@@ -87,6 +88,7 @@ class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.editedImage] as? UIImage  {
             snapshot = image
+            imageSelected.image = UIImage(named: "greenCheck")
         }
         dismiss(animated: true, completion: nil)
     }
