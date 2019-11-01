@@ -110,7 +110,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="z8T-dX-5PL">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="dlM-iF-YIr"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="dlM-iF-YIr">
+                            <connections>
+                                <action selector="onToggleEditing:" destination="Ajk-Kd-bz0" id="1hu-uW-U09"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FiU-4Y-B6t">
                             <connections>
                                 <segue destination="1Bp-qO-3VB" kind="presentation" identifier="AddHeroSegue" id="O8B-mz-hLr"/>

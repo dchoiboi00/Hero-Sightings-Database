@@ -46,7 +46,7 @@ class AddHeroVC: UIViewController {
     
     @IBAction func onAdd(_ sender: UIButton) {
         if let residence = inputResidence, let location = inputLocation {
-            CoreDataStack.shared.saveHero(name: "Placeholder", image: Int16(heroPicker.selectedRow(inComponent: 0)), zodiac: "Placeholder", residence: residence, location: location, snapshot: (UIImage(named: "batman")?.toData() as NSData?)!)
+            CoreDataStack.shared.saveHero(name: (HeroType(rawValue: heroPicker.selectedRow(inComponent: 0))?.title())!, image: Int16(heroPicker.selectedRow(inComponent: 0)), zodiac: (Zodiac(rawValue: zodiacPicker.selectedRow(inComponent: 0))?.title())!, residence: residence, location: location, snapshot: (UIImage(named: "batman")?.toData() as NSData?)!)
             delegate?.addedHero()
         }
         presentingViewController?.dismiss(animated: true)

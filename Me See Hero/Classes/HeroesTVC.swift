@@ -68,10 +68,60 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
         return cell
     }
   
+    // disallow swipe deletion when not in edit mode
+    #if !DEBUG
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return tableView.isEditing ? .delete : .none
+    }
+    #endif
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let hero = CoreDataStack.shared.sightings[indexPath.row] as? Hero {
+                deletionAlert(title: hero.name!) { _ in
+                    CoreDataStack.shared.deleteHero(hero: hero)
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    // MARK: - Deletion Alert
+    
+    func deletionAlert(title: String, completion: @escaping (UIAlertAction) -> Void) {
+        
+        let alertMsg = "Are you sure you want to delete \(title)? This cannot be undone!"
+        let alert = UIAlertController(title: "Warning", message: alertMsg, preferredStyle: .actionSheet)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: completion)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler:nil)
+        
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+
+        
+        /*
+         **  In this case we need a source for the popover as well, but don't have a handy UIBarButtonItem.
+         **  As alternative we therefore use the sourceView/sourceRect combination and specify a rectangel
+         **  centered in the view of our viewController.
+         */
+        alert.popoverPresentationController?.permittedArrowDirections = []
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: - Delegate
     
     func addedHero() {
         tableView.reloadData()
     }
-
+    
+    // MARK: - Actions
+    
+    @IBAction func onToggleEditing(_ sender: UIBarButtonItem) {
+        setEditing(!isEditing, animated: true)
+    }
+    
 }
