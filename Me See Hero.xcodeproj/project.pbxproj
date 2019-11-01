@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D23E028E236B5A91003E6D71 /* Me_See_Hero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D23E028C236B5A91003E6D71 /* Me_See_Hero.xcdatamodeld */; };
 		D23E0291236B8FE1003E6D71 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E0290236B8FE1003E6D71 /* CoreDataStack.swift */; };
 		D26F3CB9236B918500DA73D2 /* HeroesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F3CB8236B918500DA73D2 /* HeroesTVC.swift */; };
 		D26F3CBB236B920600DA73D2 /* HeroTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F3CBA236B920600DA73D2 /* HeroTVCell.swift */; };
@@ -18,6 +17,9 @@
 		D2DD3001236B5934000C2941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2DD3000236B5934000C2941 /* Assets.xcassets */; };
 		D2DD3004236B5934000C2941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DD3002236B5934000C2941 /* LaunchScreen.storyboard */; };
 		D2DD300F236B5935000C2941 /* Me_See_HeroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD300E236B5935000C2941 /* Me_See_HeroUITests.swift */; };
+		D2E9A7C7236BD30A005001B7 /* Me_See_Hero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A7C5236BD30A005001B7 /* Me_See_Hero.xcdatamodeld */; };
+		D2E9A7CE236BD7AF005001B7 /* Hero+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A7CC236BD7AF005001B7 /* Hero+CoreDataClass.swift */; };
+		D2E9A7CF236BD7AF005001B7 /* Hero+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9A7CD236BD7AF005001B7 /* Hero+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D23E028D236B5A91003E6D71 /* Me_See_Hero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Me_See_Hero.xcdatamodel; sourceTree = "<group>"; };
 		D23E0290236B8FE1003E6D71 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D26F3CB8236B918500DA73D2 /* HeroesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTVC.swift; sourceTree = "<group>"; };
 		D26F3CBA236B920600DA73D2 /* HeroTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTVCell.swift; sourceTree = "<group>"; };
@@ -46,6 +47,9 @@
 		D2DD300A236B5935000C2941 /* Me See HeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Me See HeroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DD300E236B5935000C2941 /* Me_See_HeroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me_See_HeroUITests.swift; sourceTree = "<group>"; };
 		D2DD3010236B5935000C2941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2E9A7C6236BD30A005001B7 /* Me_See_Hero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Me_See_Hero.xcdatamodel; sourceTree = "<group>"; };
+		D2E9A7CC236BD7AF005001B7 /* Hero+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hero+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D2E9A7CD236BD7AF005001B7 /* Hero+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hero+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 		D23E028F236B8F47003E6D71 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				D23E028C236B5A91003E6D71 /* Me_See_Hero.xcdatamodeld */,
+				D2E9A7CC236BD7AF005001B7 /* Hero+CoreDataClass.swift */,
+				D2E9A7CD236BD7AF005001B7 /* Hero+CoreDataProperties.swift */,
+				D2E9A7C5236BD30A005001B7 /* Me_See_Hero.xcdatamodeld */,
 				D23E0290236B8FE1003E6D71 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
@@ -228,13 +234,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23E028E236B5A91003E6D71 /* Me_See_Hero.xcdatamodeld in Sources */,
 				D26F3CB9236B918500DA73D2 /* HeroesTVC.swift in Sources */,
 				D26F3CBB236B920600DA73D2 /* HeroTVCell.swift in Sources */,
 				D2DD2FF7236B5930000C2941 /* AppDelegate.swift in Sources */,
 				D26F3CBD236B958A00DA73D2 /* AddHeroVC.swift in Sources */,
 				D23E0291236B8FE1003E6D71 /* CoreDataStack.swift in Sources */,
+				D2E9A7CF236BD7AF005001B7 /* Hero+CoreDataProperties.swift in Sources */,
+				D2E9A7CE236BD7AF005001B7 /* Hero+CoreDataClass.swift in Sources */,
 				D26F3CBF236BA16E00DA73D2 /* DetailVC.swift in Sources */,
+				D2E9A7C7236BD30A005001B7 /* Me_See_Hero.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,14 +505,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D23E028C236B5A91003E6D71 /* Me_See_Hero.xcdatamodeld */ = {
+		D2E9A7C5236BD30A005001B7 /* Me_See_Hero.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D23E028D236B5A91003E6D71 /* Me_See_Hero.xcdatamodel */,
+				D2E9A7C6236BD30A005001B7 /* Me_See_Hero.xcdatamodel */,
 			);
-			currentVersion = D23E028D236B5A91003E6D71 /* Me_See_Hero.xcdatamodel */;
-			name = Me_See_Hero.xcdatamodeld;
-			path = ../Me_See_Hero.xcdatamodeld;
+			currentVersion = D2E9A7C6236BD30A005001B7 /* Me_See_Hero.xcdatamodel */;
+			path = Me_See_Hero.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
