@@ -11,14 +11,35 @@ import UIKit
 class DetailVC: UIViewController {
     
     
+    @IBOutlet weak var snapshotImageView: UIImageView!
+    @IBOutlet weak var heroImageView: UIImageView!
     
     var hero: Hero?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //do everything here, call the methods
+        self.title = hero?.name
+        if let type = hero?.image {
+            updateImage(type: Int(type))
+        }
+//        if let imageData = hero?.snapshot {
+//            snapshotImageView.image = UIImage(data: imageData as Data)
+//        }
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        snapshotImageView.layer.borderWidth = 6
+        snapshotImageView.layer.cornerRadius = snapshotImageView.bounds.width/2
+        snapshotImageView.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    func updateImage(type: Int) {
+        if let heroType = HeroType(rawValue: type) {
+            heroImageView.image = heroType.image()
+        }
+    }
 }
