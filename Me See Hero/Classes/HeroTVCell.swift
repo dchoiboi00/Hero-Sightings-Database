@@ -10,15 +10,23 @@ import UIKit
 
 class HeroTVCell: UITableViewCell {
 
+    @IBOutlet weak var heroImageView: UIImageView!
+    @IBOutlet weak var heroLabel: UILabel!
+    @IBOutlet weak var residenceLabel: UILabel!
+    @IBOutlet weak var zodiacLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
+    func updateImage(type: Int) {
+        if let heroType = HeroType(rawValue: type) {
+            heroImageView.image = heroType.image()
+        }
+    }
 }
