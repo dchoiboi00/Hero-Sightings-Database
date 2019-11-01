@@ -12,13 +12,14 @@ protocol AddHeroDelegate: class {
     func addedHero()
 }
 
-class AddHeroVC: UIViewController {
+class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var heroPicker: UIPickerView!
     @IBOutlet weak var zodiacPicker: UIPickerView!
     
     var inputResidence: String?
     var inputLocation: String?
+    var snapshot: UIImage?
     
     weak var delegate: AddHeroDelegate?
     
@@ -46,16 +47,32 @@ class AddHeroVC: UIViewController {
     
     @IBAction func onAdd(_ sender: UIButton) {
         if let residence = inputResidence, let location = inputLocation {
-            CoreDataStack.shared.saveHero(name: (HeroType(rawValue: heroPicker.selectedRow(inComponent: 0))?.title())!, image: Int16(heroPicker.selectedRow(inComponent: 0)), zodiac: (Zodiac(rawValue: zodiacPicker.selectedRow(inComponent: 0))?.title())!, residence: residence, location: location, snapshot: (UIImage(named: "batman")?.toData() as NSData?)!)
+            CoreDataStack.shared.saveHero(name: (HeroType(rawValue: heroPicker.selectedRow(inComponent: 0))?.title())!, image: Int16(heroPicker.selectedRow(inComponent: 0)), zodiac: (Zodiac(rawValue: zodiacPicker.selectedRow(inComponent: 0))?.title())!, residence: residence, location: location, snapshot: (snapshot!.toData() as NSData?)!)
             delegate?.addedHero()
         }
         presentingViewController?.dismiss(animated: true)
     }
     
     @IBAction func onGalleryBtn(_ sender: UIButton) {
-        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
     }
     
+    // MARK: - UIImagePickerControllerDelegate
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.editedImage] as? UIImage  {
+            snapshot = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
 
