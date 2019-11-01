@@ -10,6 +10,8 @@ import UIKit
 
 class HeroesTVC: UITableViewController, AddHeroDelegate {
 
+    var alertedUserAllSighted = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,7 +66,33 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
             cell.zodiacLabel?.text = hero.zodiac
             cell.updateImage(type: Int(hero.image))
         }
-
+        
+        
+        //Notifies user when all heroes were sighted
+        var checklist = [false, false, false, false, false]
+        for sighting in CoreDataStack.shared.sightings {
+            let hero = sighting as? Hero
+            switch hero?.name {
+            case "Batman":
+                checklist[0] = true
+            case "Captain America":
+                checklist[1] = true
+            case "Iron Man":
+                checklist[2] = true
+            case "Superman":
+                checklist[3] = true
+            case "Thor":
+                checklist[4] = true
+            default:
+                print("Hero name couldn't be identified.")
+            }
+        }
+        if !checklist.contains(false) && !alertedUserAllSighted {
+            allSightedAlert()
+            alertedUserAllSighted = true
+        }
+        
+        
         return cell
     }
   
@@ -94,7 +122,7 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
         let alert = UIAlertController(title: "Warning", message: alertMsg, preferredStyle: .actionSheet)
         
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: completion)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler:nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler:nil)
         
         alert.addAction(deleteAction)
         alert.addAction(cancelAction)
@@ -108,6 +136,30 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
         alert.popoverPresentationController?.permittedArrowDirections = []
         alert.popoverPresentationController?.sourceView = self.view
         alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - Other Alerts
+    
+    func allSightedAlert() {
+        
+        let alertMsg = "All heroes were sighted. Good job!"
+        let alert = UIAlertController(title: "Congratulations", message: alertMsg, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        
+        /*
+         **  In this case we need a source for the popover as well, but don't have a handy UIBarButtonItem.
+         **  As alternative we therefore use the sourceView/sourceRect combination and specify a rectangel
+         **  centered in the view of our viewController.
+         */
+//        alert.popoverPresentationController?.permittedArrowDirections = []
+//        alert.popoverPresentationController?.sourceView = self.view
+//        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
         
         present(alert, animated: true, completion: nil)
     }
