@@ -14,10 +14,14 @@ class HeroTVCell: UITableViewCell {
     @IBOutlet weak var heroLabel: UILabel!
     @IBOutlet weak var residenceLabel: UILabel!
     @IBOutlet weak var zodiacLabel: UILabel!
+    @IBOutlet weak var livesInLabel: UILabel!
+    @IBOutlet weak var zodiacSignLabel: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        livesInLabel.text = NSLocalizedString("str_livesIn", comment: "")
+        zodiacSignLabel.text = NSLocalizedString("str_zodiacSign", comment: "")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

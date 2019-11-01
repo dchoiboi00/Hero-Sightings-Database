@@ -98,8 +98,10 @@
                                 <connections>
                                     <outlet property="heroImageView" destination="1aj-BA-yMp" id="esR-2W-Qfp"/>
                                     <outlet property="heroLabel" destination="9Nd-iv-QNW" id="II7-Fw-U4O"/>
+                                    <outlet property="livesInLabel" destination="5kK-Ky-ZrZ" id="f8g-Wt-xv1"/>
                                     <outlet property="residenceLabel" destination="DnS-qd-K4i" id="rgh-ZE-Gfc"/>
                                     <outlet property="zodiacLabel" destination="TWS-aP-iUq" id="c3L-fB-hyd"/>
+                                    <outlet property="zodiacSignLabel" destination="CVF-LY-z0W" id="ceE-tE-oD1"/>
                                     <segue destination="BfT-zt-UtC" kind="show" identifier="DetailViewSegue" id="khH-a7-lg9"/>
                                 </connections>
                             </tableViewCell>
@@ -328,8 +330,16 @@
                     </view>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="addBtn" destination="w2b-EV-8Yf" id="iRz-tH-Z8K"/>
+                        <outlet property="cancelBtn" destination="34h-m5-R6j" id="J2o-jb-eXC"/>
+                        <outlet property="heroLabel" destination="kcy-H4-rdp" id="Oyp-Ui-ovQ"/>
                         <outlet property="heroPicker" destination="ETc-Vp-hcZ" id="Qab-j5-8OF"/>
                         <outlet property="imageSelected" destination="M5a-SO-eqH" id="gut-Hs-svG"/>
+                        <outlet property="locationLabel" destination="nFb-Kb-0k6" id="q5m-0Q-wRd"/>
+                        <outlet property="pickImageLabel" destination="Xiv-BS-7w3" id="r15-oM-Z2Z"/>
+                        <outlet property="residenceLabel" destination="sQ5-1o-Of7" id="JTM-HU-ZAB"/>
+                        <outlet property="seeGalleryBtn" destination="wXE-bi-Sz7" id="VRA-Pm-T2y"/>
+                        <outlet property="zodiacLabel" destination="5ZN-3r-reG" id="fYM-qf-NMX"/>
                         <outlet property="zodiacPicker" destination="xuz-Ow-fau" id="FWo-7a-OXT"/>
                     </connections>
                 </viewController>

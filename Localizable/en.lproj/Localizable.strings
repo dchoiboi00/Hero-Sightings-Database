@@ -1,0 +1,50 @@
+/* 
+  Localizable.strings
+  Rock the Boat
+
+  Created by Daniel Choi on 10/7/19.
+  Copyright © 2019 Daniel Choi. All rights reserved.
+*/
+"str_batman" = "Batman";
+"str_captUS" = "Captain America";
+"str_ironman" = "Iron Man";
+"str_superman" = "Superman";
+"str_thor" = "Thor";
+
+"str_aquarius" = "Aquarius";
+"str_pisces" = "Pisces";
+"str_aries" = "Aries";
+"str_taurus" = "Taurus";
+"str_gemini" = "Gemini";
+"str_cancer" = "Cancer";
+"str_leo" = "Leo";
+"str_virgo" = "Virgo";
+"str_libra" = "Libra";
+"str_scorpio" = "Scorpio";
+"str_sagittarius" = "Sagittarius";
+"str_capricorn" = "Capricorn";
+
+"str_livesIn" = "Lives in:";
+"str_zodiacSign" = "Zodiac sign:";
+
+"str_warning" = "Warning";
+"str_okay" = "Okay";
+"str_emptyTextFieldAlertMsg" = "Please enter values for all the text fields.";
+
+"str_tvcTitle" = "Hero Sightings";
+"str_failedIdentifyHero" = "Failed to identify hero type";
+
+"str_deletionAlertMsg" = "Are you sure you want to delete %@? This cannot be undone!";
+"str_delete" = "Delete";
+"str_cancel" = "Cancel";
+
+"str_allSightedAlertMsg" = "All heroes were sighted. Good job!";
+"str_congratulations" = "Congratulations";
+
+"str_hero" = "Hero";
+"str_zodiac" = "Zodiac";
+"str_residence" = "City of residence";
+"str_location" = "Last seen location";
+"str_pickImage" = "Pick an image";
+"str_seeGallery" = "See gallery";
+"str_add" = "Add";

@@ -14,6 +14,16 @@ protocol AddHeroDelegate: class {
 
 class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var heroLabel: UILabel!
+    @IBOutlet weak var zodiacLabel: UILabel!
+    @IBOutlet weak var residenceLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var pickImageLabel: UILabel!
+    @IBOutlet weak var seeGalleryBtn: UIButton!
+    @IBOutlet weak var cancelBtn: UIButton!
+    @IBOutlet weak var addBtn: UIButton!
+    
+    
     @IBOutlet weak var heroPicker: UIPickerView!
     @IBOutlet weak var zodiacPicker: UIPickerView!
     @IBOutlet weak var imageSelected: UIImageView!
@@ -27,6 +37,15 @@ class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     override func viewDidLoad() {
         super.viewDidLoad()
         imageSelected.image = UIImage(named: "redNo")
+        
+        heroLabel.text = NSLocalizedString("str_hero", comment: "")
+        zodiacLabel.text = NSLocalizedString("str_zodiac", comment: "")
+        residenceLabel.text = NSLocalizedString("str_residence", comment: "")
+        locationLabel.text = NSLocalizedString("str_location", comment: "")
+        pickImageLabel.text = NSLocalizedString("str_pickImage", comment: "")
+        seeGalleryBtn.setTitle(NSLocalizedString("str_seeGallery", comment: ""), for: .normal)
+        cancelBtn.setTitle(NSLocalizedString("str_cancel", comment: ""), for: .normal)
+        addBtn.setTitle(NSLocalizedString("str_add", comment: ""), for: .normal)
     }
     
     // MARK: - Actions
@@ -69,10 +88,10 @@ class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     // MARK: - Empty Textfields Alert
     func emptyTextfieldAlert() {
         
-        let alertMsg = "Please enter values for all the text fields."
-        let alert = UIAlertController(title: "Warning", message: alertMsg, preferredStyle: .alert)
+        let alertMsg = NSLocalizedString("str_emptyTextFieldAlertMsg", comment: "")
+        let alert = UIAlertController(title: NSLocalizedString("str_warning", comment: ""), message: alertMsg, preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: NSLocalizedString("str_okay", comment: ""), style: .default, handler: nil)
         
         alert.addAction(okAction)
         

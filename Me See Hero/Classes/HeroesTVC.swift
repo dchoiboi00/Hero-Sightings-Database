@@ -9,7 +9,7 @@
 import UIKit
 
 class HeroesTVC: UITableViewController, AddHeroDelegate {
-
+    
     var alertedUserAllSighted = false
     
     override func viewDidLoad() {
@@ -17,7 +17,7 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
 
         CoreDataStack.shared.update()
         
-        self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
+        self.title = NSLocalizedString("str_tvcTitle", comment: "")
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
@@ -73,18 +73,18 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
         for sighting in CoreDataStack.shared.sightings {
             let hero = sighting as? Hero
             switch hero?.name {
-            case "Batman":
+            case NSLocalizedString("str_batman", comment: ""):
                 checklist[0] = true
-            case "Captain America":
+            case NSLocalizedString("str_captUS", comment: ""):
                 checklist[1] = true
-            case "Iron Man":
+            case NSLocalizedString("str_ironman", comment: ""):
                 checklist[2] = true
-            case "Superman":
+            case NSLocalizedString("str_superman", comment: ""):
                 checklist[3] = true
-            case "Thor":
+            case NSLocalizedString("str_thor", comment: ""):
                 checklist[4] = true
             default:
-                print("Hero name couldn't be identified.")
+                print(NSLocalizedString("str_failedIdentifyHero", comment: ""))
             }
         }
         if !checklist.contains(false) && !alertedUserAllSighted {
@@ -118,11 +118,11 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
     
     func deletionAlert(title: String, completion: @escaping (UIAlertAction) -> Void) {
         
-        let alertMsg = "Are you sure you want to delete \(title)? This cannot be undone!"
-        let alert = UIAlertController(title: "Warning", message: alertMsg, preferredStyle: .actionSheet)
+        let alertMsg = String(format: NSLocalizedString("str_deletionAlertMsg", comment: ""), "\(title)")
+        let alert = UIAlertController(title: NSLocalizedString("str_warning", comment: ""), message: alertMsg, preferredStyle: .actionSheet)
         
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: completion)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler:nil)
+        let deleteAction = UIAlertAction(title: NSLocalizedString("str_delete", comment: ""), style: .destructive, handler: completion)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("str_cancel", comment: ""), style: .default, handler:nil)
         
         alert.addAction(deleteAction)
         alert.addAction(cancelAction)
@@ -138,10 +138,10 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
     
     func allSightedAlert() {
         
-        let alertMsg = "All heroes were sighted. Good job!"
-        let alert = UIAlertController(title: "Congratulations", message: alertMsg, preferredStyle: .alert)
+        let alertMsg = NSLocalizedString("str_allSightedAlertMsg", comment: "")
+        let alert = UIAlertController(title: NSLocalizedString("str_congratulations", comment: ""), message: alertMsg, preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: NSLocalizedString("str_okay", comment: ""), style: .default, handler: nil)
         
         alert.addAction(okAction)
         

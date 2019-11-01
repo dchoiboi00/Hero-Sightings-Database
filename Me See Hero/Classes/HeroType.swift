@@ -16,15 +16,15 @@ enum HeroType: Int {
     func title() -> String {
         switch self {
         case .batman:
-            return "Batman"
+            return NSLocalizedString("str_batman", comment: "")
         case .captUS:
-            return "Captain America"
+            return NSLocalizedString("str_captUS", comment: "")
         case .ironman:
-            return "Iron Man"
+            return NSLocalizedString("str_ironman", comment: "")
         case .superman:
-            return "Superman"
+            return NSLocalizedString("str_superman", comment: "")
         case .thor:
-            return "Thor"
+            return NSLocalizedString("str_thor", comment: "")
         }
     }
     
@@ -51,29 +51,29 @@ enum Zodiac: Int {
     func title() -> String {
         switch self {
         case .aquarius:
-            return "Aquarius"
+            return NSLocalizedString("str_aquarius", comment: "")
         case .pisces:
-            return "Pisces"
+            return NSLocalizedString("str_pisces", comment: "")
         case .aries:
-            return "Aries"
+            return NSLocalizedString("str_aries", comment: "")
         case .taurus:
-            return "Taurus"
+            return NSLocalizedString("str_taurus", comment: "")
         case .gemini:
-            return "Gemini"
+            return NSLocalizedString("str_gemini", comment: "")
         case .cancer:
-            return "Cancer"
+            return NSLocalizedString("str_cancer", comment: "")
         case .leo:
-            return "Leo"
+            return NSLocalizedString("str_leo", comment: "")
         case .virgo:
-            return "Virgo"
+            return NSLocalizedString("str_virgo", comment: "")
         case .libra:
-            return "Libra"
+            return NSLocalizedString("str_libra", comment: "")
         case .scorpio:
-            return "Scorpio"
+            return NSLocalizedString("str_scorpio", comment: "")
         case .sagittarius:
-            return "Sagittarius"
+            return NSLocalizedString("str_sagittarius", comment: "")
         case .capricorn:
-            return "Capricorn"
+            return NSLocalizedString("str_capricorn", comment: "")
         }
     }
     
