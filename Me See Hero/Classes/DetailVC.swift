@@ -9,7 +9,11 @@
 import UIKit
 
 class DetailVC: UIViewController {
-
+    
+    
+    
+    var hero: Hero?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

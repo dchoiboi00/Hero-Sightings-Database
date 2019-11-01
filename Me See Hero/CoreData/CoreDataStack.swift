@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 final class CoreDataStack: NSObject {
     
@@ -43,7 +44,7 @@ final class CoreDataStack: NSObject {
         }
     }
     
-    func saveHero(name: String, image: Int16, zodiac: String, residence: String, location: String, snapshot: NSData) {
+    func saveHero(name: String, image: Int16, zodiac: String, residence: String, location: String, snapshot: UIImage) {
         
         if let entity = NSEntityDescription.entity(forEntityName: "Hero", in: context) {
             let hero = NSManagedObject(entity: entity, insertInto: context)
