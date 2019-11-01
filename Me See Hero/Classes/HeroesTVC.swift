@@ -68,7 +68,7 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
         }
         
         
-        //Notifies user when all heroes were sighted
+        //Notifies user when all heroes were sighted, but only ONCE
         var checklist = [false, false, false, false, false]
         for sighting in CoreDataStack.shared.sightings {
             let hero = sighting as? Hero
@@ -127,12 +127,6 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
         alert.addAction(deleteAction)
         alert.addAction(cancelAction)
 
-        
-        /*
-         **  In this case we need a source for the popover as well, but don't have a handy UIBarButtonItem.
-         **  As alternative we therefore use the sourceView/sourceRect combination and specify a rectangel
-         **  centered in the view of our viewController.
-         */
         alert.popoverPresentationController?.permittedArrowDirections = []
         alert.popoverPresentationController?.sourceView = self.view
         alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
@@ -151,15 +145,9 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
         
         alert.addAction(okAction)
         
-        
-        /*
-         **  In this case we need a source for the popover as well, but don't have a handy UIBarButtonItem.
-         **  As alternative we therefore use the sourceView/sourceRect combination and specify a rectangel
-         **  centered in the view of our viewController.
-         */
-//        alert.popoverPresentationController?.permittedArrowDirections = []
-//        alert.popoverPresentationController?.sourceView = self.view
-//        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
+        alert.popoverPresentationController?.permittedArrowDirections = []
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
         
         present(alert, animated: true, completion: nil)
     }

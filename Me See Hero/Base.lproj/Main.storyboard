@@ -35,48 +35,45 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ij1-a9-gA2">
-                                            <rect key="frame" x="155" y="19" width="773" height="90"/>
+                                            <rect key="frame" x="155" y="19" width="723" height="90"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Batman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nd-iv-QNW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="773" height="31"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="723" height="31"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="HCg-s3-d4l">
-                                                    <rect key="frame" x="0.0" y="40" width="773" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="40" width="723" height="20.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives in: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kK-Ky-ZrZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Lives in: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kK-Ky-ZrZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="20.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="70" id="40L-7t-PoP"/>
+                                                                <constraint firstAttribute="width" constant="75" id="EKb-eP-2rl"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gotham" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnS-qd-K4i">
-                                                            <rect key="frame" x="81" y="0.0" width="692" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gotham" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DnS-qd-K4i">
+                                                            <rect key="frame" x="86" y="0.0" width="637" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="0iF-LP-5bs">
-                                                    <rect key="frame" x="0.0" y="69.5" width="773" height="20.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="0iF-LP-5bs">
+                                                    <rect key="frame" x="0.0" y="69.5" width="723" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zodiac sign:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVF-LY-z0W">
                                                             <rect key="frame" x="0.0" y="0.0" width="75" height="20.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="75" id="zZ5-CX-HPL"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capricorn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWS-aP-iUq">
-                                                            <rect key="frame" x="84" y="0.0" width="689" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capricorn" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TWS-aP-iUq">
+                                                            <rect key="frame" x="86" y="0.0" width="637" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -84,6 +81,9 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CVF-LY-z0W" firstAttribute="width" secondItem="5kK-Ky-ZrZ" secondAttribute="width" id="0fy-bN-TJP"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
@@ -92,7 +92,7 @@
                                         <constraint firstItem="Ij1-a9-gA2" firstAttribute="top" secondItem="a01-HP-HZA" secondAttribute="topMargin" constant="8" id="GjC-0Y-OiC"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Ij1-a9-gA2" secondAttribute="bottom" constant="8" id="dtG-MO-B76"/>
                                         <constraint firstItem="Ij1-a9-gA2" firstAttribute="leading" secondItem="1aj-BA-yMp" secondAttribute="trailing" constant="30" id="uhm-sT-v6J"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Ij1-a9-gA2" secondAttribute="trailing" constant="50" id="zX7-Qe-0Ag"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ij1-a9-gA2" secondAttribute="trailing" constant="100" id="zX7-Qe-0Ag"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -236,7 +236,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tYn-JC-Z6y" userLabel="Residence">
                                 <rect key="frame" x="50" y="270" width="440" height="31.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City of residence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ5-1o-Of7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City of residence" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sQ5-1o-Of7">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="31.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
@@ -256,7 +256,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Fk3-VQ-Q1V" userLabel="Last Seen">
                                 <rect key="frame" x="50" y="351.5" width="440" height="31.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last seen location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFb-Kb-0k6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last seen location" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nFb-Kb-0k6">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="31.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>

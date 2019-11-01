@@ -46,11 +46,15 @@ class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     }
     
     @IBAction func onAdd(_ sender: UIButton) {
-        if let residence = inputResidence, let location = inputLocation {
-            CoreDataStack.shared.saveHero(name: (HeroType(rawValue: heroPicker.selectedRow(inComponent: 0))?.title())!, image: Int16(heroPicker.selectedRow(inComponent: 0)), zodiac: (Zodiac(rawValue: zodiacPicker.selectedRow(inComponent: 0))?.title())!, residence: residence, location: location, snapshot: (snapshot?.toData() as NSData? ?? ((UIImage(named: "NYC")!.toData() as NSData?)!)))
-            delegate?.addedHero()
+        if inputResidence == nil || inputLocation == nil {
+            emptyTextfieldAlert()
+        } else {
+            if let residence = inputResidence, let location = inputLocation {
+                CoreDataStack.shared.saveHero(name: (HeroType(rawValue: heroPicker.selectedRow(inComponent: 0))?.title())!, image: Int16(heroPicker.selectedRow(inComponent: 0)), zodiac: (Zodiac(rawValue: zodiacPicker.selectedRow(inComponent: 0))?.title())!, residence: residence, location: location, snapshot: (snapshot?.toData() as NSData? ?? ((UIImage(named: "NYC")!.toData() as NSData?)!)))
+                delegate?.addedHero()
+            }
+            presentingViewController?.dismiss(animated: true)
         }
-        presentingViewController?.dismiss(animated: true)
     }
     
     @IBAction func onGalleryBtn(_ sender: UIButton) {
@@ -59,6 +63,23 @@ class AddHeroVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
         picker.allowsEditing = true
         picker.sourceType = .photoLibrary
         present(picker, animated: true, completion: nil)
+    }
+    
+    // MARK: - Empty Textfields Alert
+    func emptyTextfieldAlert() {
+        
+        let alertMsg = "Please enter values for all the text fields."
+        let alert = UIAlertController(title: "Warning", message: alertMsg, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        alert.popoverPresentationController?.permittedArrowDirections = []
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     // MARK: - UIImagePickerControllerDelegate
