@@ -21,7 +21,7 @@ extension Hero {
     @NSManaged public var location: String?
     @NSManaged public var name: String?
     @NSManaged public var residence: String?
-    @NSManaged public var snapshot: UIImage?
+    @NSManaged public var snapshot: NSData?
     @NSManaged public var uuid: UUID?
     @NSManaged public var zodiac: String?
 

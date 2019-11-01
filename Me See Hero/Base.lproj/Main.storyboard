@@ -180,6 +180,10 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="epT-G4-1jn"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="1Bp-qO-3VB" id="zqg-rY-kOp"/>
+                                            <outlet property="delegate" destination="1Bp-qO-3VB" id="28K-Bq-gBg"/>
+                                        </connections>
                                     </pickerView>
                                 </subviews>
                             </stackView>
@@ -197,6 +201,10 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="iSY-DL-O05"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="1Bp-qO-3VB" id="45j-nQ-BtI"/>
+                                            <outlet property="delegate" destination="1Bp-qO-3VB" id="8lk-0C-0su"/>
+                                        </connections>
                                     </pickerView>
                                 </subviews>
                             </stackView>

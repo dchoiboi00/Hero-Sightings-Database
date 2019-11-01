@@ -75,10 +75,10 @@
 		D23E028F236B8F47003E6D71 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				D23E0290236B8FE1003E6D71 /* CoreDataStack.swift */,
 				D2E9A7CC236BD7AF005001B7 /* Hero+CoreDataClass.swift */,
 				D2E9A7CD236BD7AF005001B7 /* Hero+CoreDataProperties.swift */,
 				D2E9A7C5236BD30A005001B7 /* Me_See_Hero.xcdatamodeld */,
-				D23E0290236B8FE1003E6D71 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";

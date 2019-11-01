@@ -14,7 +14,7 @@ final class CoreDataStack: NSObject {
     
     static let shared = CoreDataStack()
     
-    let modelName = "HeroSightings"
+    let modelName = "Me_See_Hero"
     
     lazy var context: NSManagedObjectContext = {
         return self.persistentContainer.viewContext
@@ -22,7 +22,7 @@ final class CoreDataStack: NSObject {
     
     lazy var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "HeroSightings")
+        let container = NSPersistentContainer(name: "Me_See_Hero")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -44,7 +44,7 @@ final class CoreDataStack: NSObject {
         }
     }
     
-    func saveHero(name: String, image: Int16, zodiac: String, residence: String, location: String, snapshot: UIImage) {
+    func saveHero(name: String, image: Int16, zodiac: String, residence: String, location: String, snapshot: NSData) {
         
         if let entity = NSEntityDescription.entity(forEntityName: "Hero", in: context) {
             let hero = NSManagedObject(entity: entity, insertInto: context)

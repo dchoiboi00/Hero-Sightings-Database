@@ -46,7 +46,7 @@ class AddHeroVC: UIViewController {
     
     @IBAction func onAdd(_ sender: UIButton) {
         if let residence = inputResidence, let location = inputLocation {
-            CoreDataStack.shared.saveHero(name: "Placeholder", image: Int16(heroPicker.selectedRow(inComponent: 0)), zodiac: "Placeholder", residence: residence, location: location, snapshot: UIImage(named: "batman")!)
+            CoreDataStack.shared.saveHero(name: "Placeholder", image: Int16(heroPicker.selectedRow(inComponent: 0)), zodiac: "Placeholder", residence: residence, location: location, snapshot: (UIImage(named: "batman")?.toData() as NSData?)!)
             delegate?.addedHero()
         }
         presentingViewController?.dismiss(animated: true)
@@ -80,4 +80,12 @@ extension AddHeroVC: UIPickerViewDelegate {
             return Zodiac(rawValue: row)?.title()
         }
     }
+}
+
+extension UIImage {
+    
+    func toData() -> Data? {
+        return pngData()
+    }
+    
 }
