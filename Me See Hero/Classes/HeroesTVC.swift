@@ -72,19 +72,20 @@ class HeroesTVC: UITableViewController, AddHeroDelegate {
         var checklist = [false, false, false, false, false]
         for sighting in CoreDataStack.shared.sightings {
             let hero = sighting as? Hero
-            switch hero?.name {
-            case NSLocalizedString("str_batman", comment: ""):
+            switch hero?.image {
+            case 0:
                 checklist[0] = true
-            case NSLocalizedString("str_captUS", comment: ""):
+            case 1:
                 checklist[1] = true
-            case NSLocalizedString("str_ironman", comment: ""):
+            case 2:
                 checklist[2] = true
-            case NSLocalizedString("str_superman", comment: ""):
+            case 3:
                 checklist[3] = true
-            case NSLocalizedString("str_thor", comment: ""):
+            case 4:
                 checklist[4] = true
             default:
                 print(NSLocalizedString("str_failedIdentifyHero", comment: ""))
+                
             }
         }
         if !checklist.contains(false) && !alertedUserAllSighted {
