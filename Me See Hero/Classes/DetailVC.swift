@@ -44,26 +44,28 @@ class DetailVC: UIViewController {
     }
     
     func randomlyPlaceHero() {
+        let midX = Int(self.view.frame.midX), midY = Int(self.view.frame.midY)
         switch UIDevice.current.orientation {
         case .portrait:
-            let x = Int.random(in: 85 ..< 395), y = Int.random(in: 340 ..< 625)
+            let x = Int.random(in: midX - 300 ..< midX + 10), y = Int.random(in: midY - 160  ..< midY + 100)
             heroImageView.frame.origin.x = CGFloat(x)
             heroImageView.frame.origin.y = CGFloat(y)
         case .portraitUpsideDown:
-            let x = Int.random(in: 85 ..< 395), y = Int.random(in: 340 ..< 625)
+            let x = Int.random(in: midX - 300 ..< midX + 10), y = Int.random(in: midY - 160  ..< midY + 100)
             heroImageView.frame.origin.x = CGFloat(x)
             heroImageView.frame.origin.y = CGFloat(y)
         case .landscapeLeft:
-            let x = Int.random(in: 210 ..< 570), y = Int.random(in: 200 ..< 510)
+            let x = Int.random(in: midX - 300 ..< midX + 30), y = Int.random(in: midY - 160  ..< midY + 30)
             heroImageView.frame.origin.x = CGFloat(x)
             heroImageView.frame.origin.y = CGFloat(y)
         case .landscapeRight:
-            let x = Int.random(in: 210 ..< 570), y = Int.random(in: 200 ..< 510)
+            let x = Int.random(in: midX - 300 ..< midX + 30), y = Int.random(in: midY - 160  ..< midY + 30)
             heroImageView.frame.origin.x = CGFloat(x)
             heroImageView.frame.origin.y = CGFloat(y)
         default:
-            heroImageView.frame.origin.x = self.view.frame.midX
-            heroImageView.frame.origin.y = self.view.frame.midY
+            let x = Int.random(in: midX - 300 ..< midX + 10), y = Int.random(in: midY - 160  ..< midY + 30)
+            heroImageView.frame.origin.x = CGFloat(x)
+            heroImageView.frame.origin.y = CGFloat(y)
         }
     }
 }
