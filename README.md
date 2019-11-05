@@ -15,3 +15,6 @@ The hero image is randomly placed over the gallery background image (representin
 The app is localized also in Korean. The default scheme is set initially to Korean.
 
 The user is also alerted when all 5 heroes have been sighted. This works even when some table cells are in different languages.
+
+<img src="/Me%20See%20Hero/Assets.xcassets/Add.png" width="300" height="440">
+<img src="/Me%20See%20Hero/Assets.xcassets/DetailVC.png" width="300" height="440">
